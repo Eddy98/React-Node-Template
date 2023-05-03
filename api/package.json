@@ -1,0 +1,23 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Backend api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddy98/React-Node-Template.git"
+  },
+  "author": "Eddy98",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eddy98/React-Node-Template/issues"
+  },
+  "homepage": "https://github.com/Eddy98/React-Node-Template#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
