@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const fetchApi = async (setData) => {
   try {
-    const result = await fetch('http://localhost:3000');
+    const result = await fetch('http://localhost:3000/api');
     const jsonData = await result.json();
     setData(jsonData);
   } catch (error) {
