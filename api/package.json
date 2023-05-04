@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend api",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon ./server.js"
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/Eddy98/React-Node-Template#readme",
   "dependencies": {
+    "chalk": "^5.2.0",
     "cors": "^2.8.5",
     "express": "^4.18.2"
   },
