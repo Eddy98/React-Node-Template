@@ -18,6 +18,6 @@ export class Logger {
   }
 
   debug(message) {
-    console.log(chalk.blue(`${this.name}_LOGGER_INFO: ${message}`));
+    console.log(chalk.blue(`${this.name}_LOGGER_DEBUG: ${message}`));
   }
 }
