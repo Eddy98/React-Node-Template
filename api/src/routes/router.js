@@ -12,7 +12,6 @@ router.use((req, res, next) => {
 });
 
 router.get('/', (req, res) => {
-  console.log('here');
   res.send({ message: 'Eduardo Graziano' });
 });
 

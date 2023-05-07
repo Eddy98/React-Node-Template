@@ -6,15 +6,15 @@ export class Logger {
   }
 
   error(message) {
-    console.error(`${this.name}_LOGGER_ERROR: ${message}`);
+    console.error(chalk.red(`${this.name}_LOGGER_ERROR: ${message}`));
   }
 
   warn(message) {
-    console.warn(`${this.name}_LOGGER_WARN: ${message}`);
+    console.warn(chalk.yellow(`${this.name}_LOGGER_WARN: ${message}`));
   }
 
   info(message) {
-    console.log(`${this.name}_LOGGER_INFO: ${message}`);
+    console.log(chalk.white(`${this.name}_LOGGER_INFO: ${message}`));
   }
 
   debug(message) {
