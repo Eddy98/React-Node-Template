@@ -1,5 +1,5 @@
 name: Node.js CI
-run-name: ${{ github.actor }} is testing out GitHub Actions with Node 🚀
+run-name: ${{ github.actor }} build and test Node 🚀
 defaults:
   run:
     working-directory: ./api/
