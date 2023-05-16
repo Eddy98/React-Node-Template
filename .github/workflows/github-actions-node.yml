@@ -3,22 +3,25 @@ run-name: ${{ github.actor }} build and test Node 🚀
 defaults:
   run:
     working-directory: ./api/
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+      - release
+  pull_request:
 jobs:
-  build:
+  API-CI:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
           cache-dependency-path: api/package-lock.json
       - run: npm ci
       - run: npm run build
