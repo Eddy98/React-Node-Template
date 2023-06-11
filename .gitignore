@@ -26,3 +26,5 @@ client/yarn-debug.log*
 client/yarn-error.log*
 
 .vscode
+node_modules
+coverage
