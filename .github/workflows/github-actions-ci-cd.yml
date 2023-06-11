@@ -1,8 +1,8 @@
-name: Node.js CI
-run-name: ${{ github.actor }} build and test Node 🚀
+name: CI/CD
+run-name: ${{ github.actor }} build and test 👾
 defaults:
   run:
-    working-directory: ./api/
+    working-directory: '.'
 on:
   push:
     branches:
@@ -10,7 +10,7 @@ on:
       - release
   pull_request:
 jobs:
-  API-CI:
+  CI:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: api/package-lock.json
+          cache-dependency-path: package-lock.json
       - run: npm ci
-      - run: npm run build
+      - run: npm run build:dev
       - run: npm test
