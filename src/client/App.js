@@ -17,7 +17,6 @@ function App() {
   const data = useRef({});
 
   useEffect(() => {
-    console.log('fetching');
     fetchApi(setDataFetched, data);
   }, []);
 
