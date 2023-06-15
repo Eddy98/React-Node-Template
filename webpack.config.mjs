@@ -23,7 +23,7 @@ export default {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   plugins: [
     new HtmlWebpackPlugin({

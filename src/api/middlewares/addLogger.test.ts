@@ -1,15 +1,14 @@
+import { Request, Response, NextFunction } from 'express';
 import { expect, jest, test } from '@jest/globals';
 import { addLogger } from './addLogger';
 
-const req = jest.fn();
-const res = jest.fn();
-const next = jest.fn();
+const req = <Request>{};
+const res = <Response>{};
+const next = <NextFunction>jest.fn();
 
 jest.mock('../utils/logger', () => {
   return {
-    Logger: jest
-      .fn()
-      .mockImplementation(() => ({ debug: jest.fn(), info: jest.fn() })),
+    logger: { debug: jest.fn(), info: jest.fn() },
   };
 });
 
@@ -30,7 +29,7 @@ describe('addLogger middleware', () => {
 
   test('should call debug and info', () => {
     addLogger(req, res, next);
-    expect(req.logger.debug).toHaveBeenCalledTimes(1);
-    expect(req.logger.info).toHaveBeenCalledTimes(1);
+    expect(req.logger!.debug).toHaveBeenCalledTimes(1);
+    expect(req.logger!.info).toHaveBeenCalledTimes(1);
   });
 });
