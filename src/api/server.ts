@@ -7,7 +7,7 @@ const app: Express = express();
 
 app.use(cors());
 
-app.use(<RequestHandler>addLogger);
+app.use('/api', <RequestHandler>addLogger);
 
 app.use('/api', apiRouter);
 
